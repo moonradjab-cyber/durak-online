@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дурак Онлайн — играть и скачать</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg1:#3c5a74;--bg2:#294155;--bg3:#1f3243;--ink:#eef4f8;--muted:rgba(238,244,248,.62);
+    --accent:#ff5b72;--accent-d:#e8485f;--brass:#cba14b;--line:rgba(255,255,255,.14);
+    --shadow:0 10px 26px -10px rgba(0,0,0,.6);box-sizing:border-box}
+  *,*::before,*::after{box-sizing:inherit}
+  html,body{height:100%;margin:0}
+  body{font-family:"Rubik",system-ui,sans-serif;color:var(--ink);min-height:100%;
+    background:radial-gradient(130% 80% at 50% 0%,#41607b,var(--bg2) 55%,var(--bg3) 100%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 18px}
+  .wrap{width:100%;max-width:440px;text-align:center}
+  .logo{font-family:"Pacifico",cursive;font-size:40px;line-height:1.1}
+  .logo b{color:var(--brass)}
+  .sub{color:var(--muted);margin:4px 0 26px}
+  a.btn{display:flex;align-items:center;gap:14px;text-decoration:none;color:#fff;
+    background:linear-gradient(#2f4c66,#28415a);border:1px solid var(--line);border-radius:16px;
+    padding:16px 18px;margin:12px 0;box-shadow:var(--shadow);transition:filter .15s,transform .08s}
+  a.btn:hover{filter:brightness(1.08)} a.btn:active{transform:translateY(1px)}
+  a.btn.play{background:linear-gradient(var(--accent),var(--accent-d));border:none}
+  a.btn .ic{width:40px;height:40px;flex:0 0 auto;display:grid;place-items:center;font-size:24px}
+  a.btn .t{flex:1;text-align:left}
+  a.btn .t b{display:block;font-size:17px}
+  a.btn .t span{font-size:12px;color:rgba(255,255,255,.7)}
+  a.btn.play .t span{color:rgba(255,255,255,.85)}
+  .foot{color:var(--muted);font-size:12px;margin-top:22px;line-height:1.5}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">ДУ<b>Р</b>АК ОНЛАЙН</div>
+    <p class="sub">2–6 игроков · подкидной и переводной · комнаты и быстрая игра</p>
+
+    <a class="btn play" href="/">
+      <div class="ic">▶</div>
+      <div class="t"><b>Играть в браузере</b><span>Сразу, без установки</span></div>
+    </a>
+
+    <a class="btn" href="/downloads/durak-setup.exe">
+      <div class="ic">🖥️</div>
+      <div class="t"><b>Скачать для Windows</b><span>Установщик .exe для компьютера</span></div>
+    </a>
+
+    <a class="btn" href="/downloads/durak.apk">
+      <div class="ic">🤖</div>
+      <div class="t"><b>Скачать для Android</b><span>Приложение .apk для телефона</span></div>
+    </a>
+
+    <div class="foot">Один аккаунт — на сайте, на телефоне и на компьютере.<br>Все версии подключаются к одному серверу и играют вместе.</div>
+  </div>
+</body>
+</html>

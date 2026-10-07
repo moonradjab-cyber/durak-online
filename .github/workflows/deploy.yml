@@ -1,0 +1,25 @@
+name: Deploy to durak05.ru
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ secrets.DEPLOY_PORT || 22 }}
+          script: |
+            set -e
+            cd /opt/durak-online
+            git pull --ff-only
+            npm install --omit=dev
+            systemctl restart durak
+            echo "Готово. health: $(curl -s localhost:${PORT:-8095}/health || echo нет)"
